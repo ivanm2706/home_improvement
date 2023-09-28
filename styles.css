@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+ul,
+li,
+a,
+address,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-block {
+  background-color: #e4e4e4;
+  padding: 10px 0;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-block {
+    display: block;
+  }
+}
+
+.contact-block-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.contact-block-wrapper > :nth-child(n) {
+  display: flex;
+}
+
+.contact-link {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.contact-address {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.contact-address > :nth-child(n) {
+  padding-left: 25px;
+}
+
+.contact-point {
+  color: #7d7d7d;
+  font-size: 14px;
+}
+
+.contact-point:hover {
+  text-decoration: underline;
+}
+
+.icon-nets {
+  fill: #818181;
+  transition: fill 300ms;
+}
+
+.icon-nets:hover {
+  fill: #00b3dc;
+}
+
+.icon {
+  position: relative;
+}
+
+.icon:before {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: -1px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-tel:before {
+  background-image: url(./image/icons/mobile.svg);
+}
+
+.icon-shedule:before {
+  background-image: url(./image/icons/shedule.svg);
+}
+
+.icon-email:before {
+  background-image: url(./image/icons/email.svg);
+}

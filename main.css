@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Oleo+Script&display=swap');
+
+h1 {
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  font-size: clamp(20px, 6vw, 33px);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.text-block {
+  color: rgb(69, 69, 69);
+  font-size: 16px;
+  text-align: center;
+}
+
+.text-block > :nth-child(2) {
+  margin-bottom: 25px;
+}
+
+.we-know {
+  margin-bottom: 35px;
+}
+
+.title-why-we {
+  margin-bottom: 35px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.list-why-we {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 630px) {
+  .list-why-we {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width: 917px) {
+  .list-why-we {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.list-why-we > li {
+  position: relative;
+  padding-inline-start: 22px;
+}
+
+.list-why-we > li:before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url(./image/icons/tick.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.why-we {
+  margin-bottom: 35px;
+}
+
+.why-choose-us-section {
+  background-color: #00b3dc;
+}
+
+.why-choose-us {
+  padding-block: 80px;
+}
+
+.why-choose-us-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  justify-items: center;
+}
+
+@media screen and (min-width: 767px) {
+  .why-choose-us-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+
+.why-choose-us-picture-block img {
+  width: 100%;
+}
+
+.accordion {
+  width: 100%;
+}
+
+.accordion-button {
+  background-color: #00b3dc;
+  color: white;
+}
+
+.accordion-button::after {
+  background-image: url(./image/icons/arrow-down.svg);
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url(./image/icons/arrow-down.svg);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #00b3dc;
+  color: white;
+}
+
+.accordion-button:focus {
+  border-color: none;
+  box-shadow: none;
+}
+
+.accordion-body {
+  background-color: #00b3dc;
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.349);
+}
+
+.why-choose-us-title {
+  position: relative;
+  font-size: clamp(18px, 5vw, 27px);
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  border-bottom: 1px solid white;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.why-choose-us-title::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 25%;
+  height: 3px;
+  background-color: white;
+}
+
+.main-section {
+  padding-block: 30px;
+  background-image: url(./image/bg-main.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.shaddow-main-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #017c998a;
+}
+
+
+.main-section-logo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.main-section-logo img {
+  position: relative;
+}
+
+.main-section-logo-link {
+  display: block;
+  margin: 0 auto;
+}
+
+.main-section-text-logo {
+  color: white;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  user-select: none;
+}
+
+.main-section-text-logo > :nth-child(n) {
+  margin-block: 0;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.main-section-text-logo > :nth-child(1) {
+    font-size: clamp(27px, 5vw, 33px);
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.main-section-text-logo > :nth-child(2) {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+.main-section-text-logo > :nth-child(3) {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.main-section-text-logo span {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.slogan {
+  display: flex;
+  gap: 10px;
+  color: white;
+  justify-content: center;
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oleo Script', cursive;
+  font-size: 20px;
+}
+
+.slogan > :not(:first-child)::before {
+  content: '.';
+  padding-right: 5px;
+  display: inline-block;
+  transform: translate(0, -5px);
+}
+
+@media screen and (min-width: 365px) {
+  .slogan {
+    font-size: 30px;
+  }
+
+  .slogan > :not(:first-child)::before {
+    transform: translate(0, -7px);
+  }
+}

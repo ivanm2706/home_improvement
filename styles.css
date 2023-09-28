@@ -69,7 +69,8 @@ span {
   padding-left: 25px;
 }
 
-.contact-point {
+.contact-point,
+.contact-point-p {
   color: #7d7d7d;
   font-size: 14px;
 }
@@ -113,4 +114,20 @@ span {
 
 .icon-email:before {
   background-image: url(./image/icons/email.svg);
+}
+
+.icon-tel-white:before {
+  background-image: url(./image/icons/mobile-white.svg);
+}
+
+.icon-shedule-white:before {
+  background-image: url(./image/icons/shedule-white.svg);
+}
+
+.icon-email-white:before {
+  background-image: url(./image/icons/email-white.svg);
+}
+
+.icon-location:before {
+  background-image: url(./image/icons/location.svg);
 }

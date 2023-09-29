@@ -61,6 +61,18 @@ header {
   margin-bottom: 3px;
 }
 
+.nav-burger.active > span:first-child {
+  transform: rotate(45deg) translate(5px, 3px);
+}
+
+.nav-burger.active > span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-burger.active > span:last-child {
+  transform: rotate(-45deg) translate(4px, -3px);
+}
+
 .logo {
   position: relative;
 }

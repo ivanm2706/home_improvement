@@ -22,7 +22,9 @@ li,
 a,
 address,
 p,
-span {
+span,
+h3,
+h5 {
   margin: 0;
   padding: 0;
 }

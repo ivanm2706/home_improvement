@@ -1,0 +1,70 @@
+
+
+.carousel-indicators {
+  position: relative;
+  display: block;
+  background-color: #00b3dc;
+  margin: 0;
+  height: 100%;
+}
+
+.carousel-indicators > h5 {
+  color: #fff;
+  font-size: 20px;
+  background-color: #00b3dc;
+  margin: 0;
+  padding: 16px 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  text-indent: 10px;
+  background-color: transparent;
+  border-top: 2px solid white;
+  border-bottom: none;
+  padding-block: 10px;
+  text-align: left;
+  color: white;
+}
+
+.carousel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: clamp(400px, 5vh, 650px);
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.section-gallery {
+  padding-block: 50px;
+}
+
+.block-indicators {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.block-indicators::-webkit-scrollbar {
+  width: 4px;
+}
+
+.block-indicators::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 450px) {
+  .carousel {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .block-indicators {
+    max-height: none;
+    height: calc(100% - 56px);
+  }
+}

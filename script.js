@@ -120,8 +120,13 @@ function toggleMobileMenu(e, isScroll = false) {
 
   if (mobileNav.classList.contains('active')) {
     const mainSection = document.querySelector('.main-section');
+    console.log(mainSection);
 
-    mobileNav.style.height = mainSection.clientHeight + 2 + 'px';
+    if(mainSection) {
+      mobileNav.style.height = mainSection.clientHeight + 2 + 'px';
+    } else {
+      mobileNav.style.height = '270px';
+    }
   } else {
     mobileNav.style.height = '0';
   }

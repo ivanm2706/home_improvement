@@ -1,0 +1,74 @@
+.we-know-about-us {
+  margin-top: 35px;
+}
+
+.why-we-about {
+  padding: 15px 0;
+}
+
+.why-we-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.title-why-we-about {
+  font-size: clamp(18px, 5vw, 20px);
+}
+
+.experience-section {
+  padding: 50px 0;
+}
+
+@media screen and (min-width: 545px) {
+  .why-we-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 997px) {
+  .why-we-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.bg-gray {
+  background-color: #ebebeb;
+}
+
+.why-we-wrapper-image {
+  width: 100%;
+  margin-bottom: 35px;
+
+}
+
+.why-we-wrapper-image > span {
+  margin: 0 auto;
+  display: block;
+  width: 55px;
+  height: 55px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.why-we-title {
+  color: #00b3dc;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.why-we-subtitle {
+  text-align: left;
+  color: #454545;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+}
+
+
+
+
+
+

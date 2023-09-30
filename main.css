@@ -12,6 +12,7 @@ h1 {
   color: rgb(69, 69, 69);
   font-size: 16px;
   text-align: center;
+  font-weight: 500;
 }
 
 .text-block > :nth-child(2) {

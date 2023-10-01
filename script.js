@@ -107,16 +107,13 @@ buttonOpenMenu.addEventListener('click', (e) => toggleMobileMenu(e));
 document.addEventListener('scroll', (e) => toggleMobileMenu(e, true));
 
 navLinks.forEach(navLink => {
-  const link = pathname.split('/');
-  const pathNameLink = link[link.length - 1];
-  console.log(pathNameLink);
+  console.log('location: ' + window.location.pathname);
 
-  const linkNav = navLink.pathname.split('/');
-  const pathNameLinkNav = linkNav[link.length - 1];
+  const pathNameNavLink = navLink.pathname[navLink.pathname.length - 1] === '/' ? navLink.pathname : `${navLink.pathname}/` ;
 
-  console.log(pathNameLinkNav);
+  console.dir('navLink: ' + pathNameNavLink);
 
-  if (pathNameLink === pathNameLinkNav) {
+  if (pathname === pathNameNavLink) {
     navLink.classList.add('active');
   }
 });

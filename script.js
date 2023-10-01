@@ -107,18 +107,18 @@ buttonOpenMenu.addEventListener('click', (e) => toggleMobileMenu(e));
 document.addEventListener('scroll', (e) => toggleMobileMenu(e, true));
 
 navLinks.forEach(navLink => {
-  const link = pathname.split('/');
+  const link = navLink.pathname.split('/');
   console.log(link);
   let comparePattern = link[link.length - 1];
-  console.log('comp' + comparePattern);
+  console.log('comp - ' + comparePattern);
 
   if (comparePattern === '') {
     comparePattern = '/';
   }
-  console.log('comp2' + comparePattern);
-  console.log('navLink.pathname' + navLink.pathname);
+  console.log('comp2 - ' + comparePattern);
+  console.log('pathname - ' + pathname);
 
-  if (navLink.pathname === comparePattern) {
+  if (pathname === comparePattern) {
     navLink.classList.add('active');
   }
 });

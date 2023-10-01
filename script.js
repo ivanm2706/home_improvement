@@ -107,10 +107,10 @@ buttonOpenMenu.addEventListener('click', (e) => toggleMobileMenu(e));
 document.addEventListener('scroll', (e) => toggleMobileMenu(e, true));
 
 navLinks.forEach(navLink => {
-  console.log(pathname);
+  console.log(pathname.slice(0, -1));
   console.log(navLink.pathname);
 
-  if (pathname === navLink.pathname) {
+  if (pathname === pathname.slice(0, -1)) {
     navLink.classList.add('active');
   }
 });

@@ -107,7 +107,11 @@ buttonOpenMenu.addEventListener('click', (e) => toggleMobileMenu(e));
 document.addEventListener('scroll', (e) => toggleMobileMenu(e, true));
 
 navLinks.forEach(navLink => {
-  const comparePattern = pathname === '/' ? pathname : pathname.slice(0, -1);
+  let comparePattern = pathname === '/' ? pathname : pathname.slice(0, -1);
+
+  if (comparePattern === '') {
+    comparePattern = '/';
+  }
 
   if (navLink.pathname === comparePattern) {
     navLink.classList.add('active');

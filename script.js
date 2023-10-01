@@ -110,9 +110,6 @@ navLinks.forEach(navLink => {
   const link = pathname.split('/');
   let comparePattern = link[link.length - 1];
 
-  console.log(comparePattern);
-  console.log(navLink.pathname);
-
   if (comparePattern === '') {
     comparePattern = '/';
   }

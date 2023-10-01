@@ -110,7 +110,7 @@ navLinks.forEach(navLink => {
   console.log(pathname.slice(0, -1));
   console.log(navLink.pathname);
 
-  if (pathname === pathname.slice(0, -1)) {
+  if (navLink.pathname === pathname.slice(0, -1)) {
     navLink.classList.add('active');
   }
 });

@@ -112,7 +112,7 @@ navLinks.forEach(navLink => {
   console.log(pathNameLink);
 
   const linkNav = navLink.pathname.split('/');
-  const pathNameLinkNav = link[link.length - 1];
+  const pathNameLinkNav = linkNav[link.length - 1];
 
   console.log(pathNameLinkNav);
 

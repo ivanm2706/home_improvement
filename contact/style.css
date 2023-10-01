@@ -1,0 +1,62 @@
+.contact-page-skills-section {
+  padding-top: 50px;
+}
+
+.form-contact-page {
+  padding: 15px 10px;
+  background-color: rgb(239, 239, 239);
+}
+
+.form-contact-page button {
+  background-color: #00b3dc;
+  border: 2px solid transparent;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 6px 0;
+  width: 160px;
+  border-radius: 4px;
+  box-shadow: 0 0 6px 2px #e2e2e2;
+  transition: all 300ms;
+  display: block;
+  margin: 0 auto;
+}
+
+.form-contact-page button.loading {
+  color: #00b3dc;
+  position: relative;
+}
+
+.form-contact-page button.loading::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 3px solid white;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  top: 50%;
+  right: 50%;
+  translate: 50% -50%;
+  animation: spin 1s linear infinite;;
+}
+
+.form-contact-page button:hover {
+  border: 2px solid #00b3dc;
+  background-color: transparent;
+  color: black;
+}
+
+.form-contact-page button.loading:hover {
+  border: 2px solid transparent;
+  background-color: #00b3dc;
+  color: #00b3dc;
+  cursor: auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

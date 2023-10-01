@@ -16,14 +16,17 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const name = e.target[0];
-  const email = e.target[1];
-  const address = e.target[2];
-  const message = e.target[3];
-  const button = e.target[4];
+  const phone = e.target[1];
+  const email = e.target[2];
 
-  if (button.classList.contains('loading')) {
+  const address = e.target[3];
+  const message = e.target[4];
+  const buttonSubmit = document.querySelector('button[type="submit"]');
+
+  if (buttonSubmit.classList.contains('loading')) {
     return;
   }
+
   let isError = false;
 
   if (name.value === '') {
@@ -32,9 +35,9 @@ form.addEventListener('submit', (e) => {
     isError = true;
   }
 
-  if (email.value === '') {
-    email.classList.add('error');
-    email.nextElementSibling.style.display = 'block';
+  if (phone.value === '') {
+    phone.classList.add('error');
+    phone.nextElementSibling.style.display = 'block';
     isError = true;
   }
 
@@ -42,14 +45,18 @@ form.addEventListener('submit', (e) => {
     return;
   }
   
-  let messageText = `Order by ${name.value}, ${email.value}.`;
+  let messageText = `Order by ${name.value}, phone: ${phone.value}.`;
 
-  if (address.value !== '') {
+  if (email && email.value) {
+    messageText += ` Email: ${email.value}`;
+  }
+
+  if (address && address.value !== '') {
     messageText += ` Address: ${address.value}.`;
   }
 
-  if (message.value !== '') {
-    messageText += ` Message: ${massage.value}`;
+  if (message && message.value !== '') {
+    messageText += ` Message: ${message.value}`;
   }
 
   const botToken = '6638623940:AAFB2ScV-fOG0XFx_T3PHDnaPadPwb7ANY8';
@@ -68,7 +75,7 @@ form.addEventListener('submit', (e) => {
     }),
   };
 
-  button.classList.add('loading');
+  buttonSubmit.classList.add('loading');
 
   fetch(apiUrl, options)
     .then((response) => response.json())
@@ -79,11 +86,18 @@ form.addEventListener('submit', (e) => {
       console.error('Ошибка:', error);
     })
     .finally(() => {
-      button.classList.remove('loading');
+      buttonSubmit.classList.remove('loading');
       name.value = '';
       email.value = '';
-      address.value = '';
-      message.value = '';
+      phone.value = '';
+
+      if (address) {
+        address.value = '';
+      }
+
+      if (message) {
+        message.value = '';
+      }
     });
 
   console.dir(e.target[0]);
